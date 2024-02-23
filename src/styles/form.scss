@@ -1,0 +1,57 @@
+.person {
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 212, 142, 0.733);
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+
+  &__block {
+    display: grid;
+    gap: 5px;
+    align-items: center;
+    border-bottom: 1px solid rgba(139, 139, 139, 0.164);
+    padding-bottom: 10px;
+  }
+
+  &__block-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__block-info-sms {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  &__input {
+    border: 1px solid rgba(0, 212, 142, 0.733);
+    border-radius: 8px;
+    padding: 6px 12px;
+
+    &:focus {
+      border: 1px solid rgb(0, 219, 226);
+      outline: none;
+    }
+  }
+
+  &__dop-info {
+    font-size: 10px;
+    text-align: right;
+  }
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+@media (max-width: 490px) {
+  .person {
+    &__block-info {
+      grid-template-columns: none;
+    }
+  }
+}
